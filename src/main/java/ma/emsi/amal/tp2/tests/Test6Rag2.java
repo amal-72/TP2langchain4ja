@@ -21,7 +21,7 @@ public class Test6Rag2 {
 
     interface Assistant {
         String chat(String userMessage);
-    }Quelle est la différence entre le Machine Learning supervisé et le Machine Learning non supervisé ?
+    }
 
     public static void main(String[] args) {
 
