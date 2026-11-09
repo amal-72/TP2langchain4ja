@@ -1,3 +1,4 @@
+
 package ma.emsi.amal.tp2.tests.outil.meteo;
 
 import com.google.gson.Gson;
@@ -88,12 +89,17 @@ public class MeteoTool {
         }
     }
 
-    @Tool("Retourne la latitude et la longitude d'une ville à partir de son nom.")
+    @Tool("""
+        Retourne la latitude et la longitude d'une ville à partir de son nom.
+        """)
     public double[] getCoordonnees(
             @P(value = "Nom de la ville", name = "ville") String ville) {
 
         try {
-            String nomVille = URLEncoder.encode(ville, StandardCharsets.UTF_8);
+            String nomVille = URLEncoder.encode(
+                    ville,
+                    StandardCharsets.UTF_8
+            );
 
             String apiUri = "https://geocoding-api.open-meteo.com/v1/search?name="
                     + nomVille;
